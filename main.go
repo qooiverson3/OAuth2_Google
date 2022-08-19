@@ -41,8 +41,8 @@ func main() {
 
 	config := &GoogleOAuthConfig{
 		OAuth2Config: &oauth2.Config{
-			ClientID:     "1041776308737-2gcg55niljq4ti1tm3p5kh2mvsod7n26.apps.googleusercontent.com",
-			ClientSecret: "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",
+			ClientID:     "xxxxxxxxxxxxx.apps.googleusercontent.com",
+			ClientSecret: "xxxxxxxxxxxx-xxxxxxxxxxxxxx",
 			RedirectURL:  "http://localhost:9096/token",
 			Scopes: []string{
 				"https://www.googleapis.com/auth/userinfo.email",
@@ -99,7 +99,7 @@ func (c *GoogleOAuthConfig) UserConfirmation(r *gin.Context) {
 	r.Redirect(http.StatusSeeOther, redirect)
 }
 
-// GetUser 取得 Session 資訊
+// GetUser details
 func GetUser(r *gin.Context) {
 	// cookie := r.Request.Cookies()
 	session := sessions.Default(r)
